@@ -40,7 +40,15 @@
     
     
             <div class="folium-map" id="map_b4454b9832927d5c94b3e2f720f66bd3" ></div>
-        
+            <script>
+                window.onload = function() {
+                  setTimeout(function() {
+                    for (var i in window._leaflet_maps) {
+                      window._leaflet_maps[i].invalidateSize();
+                    }
+                  }, 100);
+                };
+          </script>
 </body>
 <script>
     
